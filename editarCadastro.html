@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Editar Dados</title>
+
+  <link href="bootstrap/css/bootstrap.rtl.min.css" rel="stylesheet">
+
+</head>
+
+
+<!-- NavBar -->
+<header>
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    <div class="container-fluid">
+      <div class="collapse navbar-collapse">
+        <ul class="navbar-nav ms-auto">
+        </ul>
+        <form class="d-flex">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="table.html"> Listas de Pessoas </a></li>
+            <li class="nav-item"><a class="nav-link" href="index.html"> Cadastrar Pessoa </a></li>
+          </ul>
+        </form>
+      </div>
+      <span class="navbar-brand mb-0 h1"></span>
+    </div>
+  </nav>
+
+
+</header>
+<br>
+
+<body>
+  <div class="container">
+    <br>
+    <H1 align="center">Editar dados</H1>
+    <form action="php/index.php" method="post"> <!-- Inicio do formulario -->
+
+      <!-- Nome -->
+      <div class="mb-3">
+        <label class="form-label">Nome </label>
+        <input type="text" name="nome_usuario" class="form-control" name="nome" id="nome" minlength="2" required
+          onkeyup="pegarDados()">
+      </div>
+
+      <!-- Sobrenome -->
+      <div class="mb-3">
+        <label class="form-label">Sobrenome </label>
+        <input type="text" name="nome_usuario" class="form-control" name="sobrenome" id="sobrenome" minlength="2"
+          required>
+      </div>
+
+      <!-- CPF -->
+      <div class="mb-3">
+        <label class="form-label">CPF</label>
+        <input type="text" class="form-control" name="cpf" id="cpf" placeholder="000.000.000-00" minlength="12"
+          maxlength="12" onkeyup="validar()" required>
+      </div>
+
+      <!-- RG -->
+      <div class="mb-3">
+        <label class="form-label">RG</label>
+        <input type="text" class="form-control" name="rg" id="rg" placeholder="0000-000" minlength="7" maxlength="7"
+          onkeyup="validar()" required>
+      </div>
+
+      <!-- CEP -->
+      <div class="mb-3">
+        <label class="form-label">CEP</label>
+        <input type="text" class="form-control" name="cep" id="cep" placeholder="00000-000" minlength="8" maxlength="8"
+          onkeyup="validar()" required>
+      </div>
+
+      <!-- Endereco -->
+      <div class="mb-3">
+        <label class="form-label">Endereço</label>
+        <input type="text" class="form-control" name="endereco" id="endereco" placeholder="Rua e o bairro" minlegth="10"
+          required>
+      </div>
+      <br>
+      <div align="center">
+        <button type="submit" class="btn btn-primary"> Alterar Dados</button>
+      </div>
+
+    </form>
+    <div align="center"><br><a href="table.html">Voltar para a tabela </a></div>
+  </div>
+
+  <script type="text/javascript" src="js/cadastro.js"></script>
+
+  <script>
+    function obterInformacao() {
+      var html = "";
+
+      $.getJSON("php/index.php", function (data) {
+        for (posicao in data) {
+          html = data[posicao]["nome"];
+          html = data[posicao]["sobrenome"];
+          html = data[posicao]["cpf"];
+          html = data[posicao]["rg"];
+          html = data[posicao]["cep"];
+          html = data[posicao]["endereco"];
+        }
+        document.getElementById("pessoas").innerHTML = html;
+      });
+    }
+  </script>
+</body>
+</html>
