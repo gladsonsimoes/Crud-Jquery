@@ -1,0 +1,42 @@
+$('#form').submit(function(e)
+    {
+      e.preventDefault();
+
+      var txt = $(this).serialize();
+      // console.log(txt);
+
+      $.ajax({
+        type: 'post',
+        url: form.php,
+        data: txt,
+        dataType: 'json',
+        sucess: function(json){   
+        }
+      })
+    });
+
+    =======================
+
+
+     $('#form').submit(function (e) {
+      e.preventDefault();
+
+      var txt = $(this).serialize(); //passar todas os name atraves do serialize
+      console.log(txt); //ver os itens no console
+
+      $.ajax({
+        type: 'post',
+        url: form.php,
+        data: txt,
+        dataType: 'json',
+        sucess: function (json) {
+           alert("nome é:" + json.your_name)
+        }
+      })
+    });
+
+    -------------
+
+    $p = $_POST;
+$p['your_name'] = strlen($_POST['nome']);
+echo json_encode($_POST);

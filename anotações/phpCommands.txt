@@ -126,3 +126,25 @@ $mysqli->close();
 //   print_r($_POST['cep']."<br>");
 //   print_r($_POST['endereco']."<br>");
 // } */
+
+================ PEGAR DADOS =================
+
+<?php
+// echo json_encode($_POST);
+
+if(isset($_POST['submit'])){
+
+include_once('php/index.php'); //para arquivo diferente
+
+  $nome = $_POST['nome'];
+  $sobrenome = $_POST['sobrenome'];
+  $cpf = $_POST['cpf'];
+  $rg = $_POST['rg'];
+  $cep = $_POST['cep'];
+  $endereco = $_POST['endereco'];
+ 
+  $result = mysqli_query($con, "INSERT INTO pessoas(nome ,sobrenome ,cpf ,rg ,cep ,endereco) 
+  VALUES ('$nome', '$sobrenome', '$cpf', '$rg', '$cep', '$endereco')");
+
+}
+ ?>

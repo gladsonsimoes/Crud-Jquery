@@ -1,3 +1,0 @@
-// acesso banco de dados 
-
-

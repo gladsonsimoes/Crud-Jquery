@@ -9,6 +9,9 @@
   <!-- Bootstrap CSS -->
   <link href="bootstrap/css/bootstrap.rtl.min.css" rel="stylesheet">
 
+  <!-- JQuery -->
+  <script type="text/javascript" src="js/jquery_3.6.1.js"></script>
+
   <title>Tela Cadastro</title>
 </head>
 
@@ -25,7 +28,7 @@
       <form class="d-flex">
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Cadastrar Pessoa</a>
+            <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Cadastrar Pessoa</a>
             </li>
             <li class="nav-item"><a class="nav-link" href="table.html">Tabela</a></li>
           </ul>
@@ -39,51 +42,53 @@
     <br>
     <h1 align="center">Cadastrar Pessoa</h1><br>
 
-    <form action="php/index.php" method="post">
+    <form method="post" id="form" action="php/postForm.php" >
 
       <!-- Nome -->
       <div class="mb-3">
-        <label class="form-label">Nome </label>
-        <input type="text" name="nome" id="nome" class="form-control" placeholder="Digite seu nome"
-          minlength="2" maxlength="14" required onkeyup="validar()">
+        <label class="form-label" for="">Nome </label>
+        <input type="text" name="nome" id="nome" class="form-control" placeholder="Digite seu nome" minlength="2"
+          maxlength="14" required>
       </div>
 
       <!-- Sobrenome -->
       <div class="mb-3">
-        <label class="form-label">Sobrenome </label>
-        <input type="text" class="form-control" name="sobrenome" id="sobrenome" placeholder="Digite seu sobrenome" minlength="2"
-          maxlength="40" required onkeyup="validar()">
+        <label class="form-label" for="">Sobrenome </label>
+        <input type="text" class="form-control" name="sobrenome" id="sobrenome" placeholder="Digite seu sobrenome"
+          minlength="2" maxlength="40" required>
       </div>
 
       <!-- CPF -->
       <div class="mb-3">
         <label class="form-label">CPF</label>
-        <input type="text" class="form-control" name="cpf" id="cpf" placeholder="000.000.000-00" minlength="11" maxlength="11"
-          onkeyup="validar()">
+        <input type="text" class="form-control" name="cpf" id="cpf" placeholder="000.000.000-00" maxlength="11"
+          onkeyup="validar()" required>
       </div>
 
       <!-- RG -->
       <div class="mb-3">
         <label class="form-label">RG</label>
-        <input type="text" class="form-control" name="rg" id="rg" placeholder="0000-000" minlength="7" maxlength="7"
+        <input type="text" class="form-control" name="rg" id="rg" placeholder="0000-000" maxlength="7" required
           onkeyup="validar()">
       </div>
 
       <!-- CEP -->
       <div class="mb-3">
         <label class="form-label">CEP</label>
-        <input type="text" class="form-control" name="cep" id="cep" placeholder="00000-000" minlength="8" maxlength="8"
-          onkeyup="validar()">
+        <input type="text" class="form-control" name="cep" id="cep" placeholder="00000-000" maxlength="8"
+          onkeyup="validar()" required>
       </div>
 
       <!-- Endereço -->
       <div class="mb-3">
         <label class="form-label">Endereço</label>
-        <input type="text" class="form-control" name="endereco" id="endereco" placeholder="Rua e o bairro" minlength="4">
+        <input type="text" class="form-control" name="endereco" id="endereco" placeholder="Rua e o bairro" minlength="4"
+          maxlength="100" required>
       </div>
 
       <!-- Botão de enviar o Cadastro -->
-      <button type="submit" class="btn btn-secondary" name="submit" id="submit"> Realizar Cadastro </button>
+      <button type="submit" class="btn btn-secondary" name="submit" id="submit">
+        Realizar Cadastro </button>
     </form>
   </div>
 
@@ -92,7 +97,5 @@
   <!-- BootStrap JS-->
   <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
 
-  
 </body>
-
 </html>

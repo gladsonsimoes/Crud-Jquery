@@ -1,0 +1,48 @@
+
+================== DEU ERRADO ===================
+<!-- Lançar informações na tabela -->
+    <script>
+
+        function pegarDados() {
+            $.post('php/config.php'), data, function (response){
+
+                // var form = document.getElementsById("formulario").value
+
+
+                    var recebeNome = document.getElementById("name").value;
+                    var recebeSobrenome = document.getElementById("sobrenome").value;
+                    var recebeCPF = document.getElementById("cpf").value;
+                    var rg = document.getElementById("rg").value;
+                    var cep = document.getElementById("cep").value;
+                    var endereco = document.getElementById("endereco").value;
+
+                  
+                }
+            }
+        
+
+
+    </script>
+
+
+
+    <!-- <script>
+        function pegarDados_Enviar() {
+            var nome = document.getElementById("nome").value;
+            var sobrenome = document.getElementById("sobrenome").value;
+            var cpf = document.getElementById("cpf").value;
+            var rg = document.getElementById("rg").value;
+            var cep = document.getElementById("cep").value;
+            var endereco = document.getElementById("endereco").value;
+
+            var enviar = ""
+
+            // console.log(nome,sobrenome, cpf, rg, cep, endereco);
+
+            $.post('php/config.php'), data, function (response){
+            }
+        }
+
+    </script> -->
+
+    ========================== DEU CERTO ==========================
