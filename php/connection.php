@@ -4,9 +4,12 @@
 
 header("Content-Type: application/json");
 
-$host = 'localhost:3309'; 
+$host = 'localhost:3312'; 
 $db= 'dbgladson'; 
 $user = 'root' ; 
-$pass = 'usbw' ; 
+$pass = '' ; 
 
+$con = mysqli_connect($host, $user, $pass);
+
+$database = mysqli_select_db($con, $db); 
 ?>

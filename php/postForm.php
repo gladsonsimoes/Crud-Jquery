@@ -1,14 +1,5 @@
 <?php
-
 include_once('connection.php');
-
-$con = mysqli_connect($host, $user, $pass);
-
-$database = mysqli_select_db($con, $db); 
-
-$sql = mysqli_query($con, "SELECT * FROM pessoas");
-
-$pessoas = array();
 
 if(isset($_POST['submit'])){
   $nome = $_POST['nome'];
@@ -22,4 +13,9 @@ if(isset($_POST['submit'])){
   VALUES ('$nome', '$sobrenome', '$cpf', '$rg', '$cep', '$endereco')");
 
 }
+
+header("Location: .$URL.");
+
+    
+ 
 ?>

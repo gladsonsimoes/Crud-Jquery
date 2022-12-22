@@ -21,8 +21,8 @@
         </ul>
         <form class="d-flex">
           <ul class="navbar-nav ms-auto">
-            <li class="nav-item"><a class="nav-link" href="table.html"> Listas de Pessoas </a></li>
-            <li class="nav-item"><a class="nav-link" href="index.html"> Cadastrar Pessoa </a></li>
+            <li class="nav-item"><a class="nav-link" href="table"> Listas de Pessoas </a></li>
+            <li class="nav-item"><a class="nav-link" href="cadastro"> Cadastrar Pessoa </a></li>
           </ul>
         </form>
       </div>
@@ -38,7 +38,7 @@
   <div class="container">
     <br>
     <H1 align="center">Editar dados</H1>
-    <form action="php/index.php" method="post"> <!-- Inicio do formulario -->
+    <form method="post" id="form" action="php/postForm"> <!-- Inicio do formulario -->
 
       <!-- Nome -->
       <div class="mb-3">
@@ -95,7 +95,7 @@
     function obterInformacao() {
       var html = "";
 
-      $.getJSON("php/index.php", function (data) {
+      $.getJSON("php/connection.php", function (data) {
         for (posicao in data) {
           html = data[posicao]["nome"];
           html = data[posicao]["sobrenome"];
