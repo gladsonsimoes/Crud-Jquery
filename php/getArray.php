@@ -13,5 +13,5 @@ while($linha = mysqli_fetch_assoc($sql)){
     $pessoas[] = $linha;
 }
 
-echo json_encode($pessoas); //IMPRIMIR as informações da tabela da database na table.html
+echo json_encode($pessoas); //IMPRIMIR as informações da tabela da database na table
 ?>

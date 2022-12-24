@@ -1,13 +1,14 @@
 <?php
 
-include_once('connection.php');
+// include_once('connection.php');
 
-$sql = mysqli_query($con, "SELECT * FROM pessoas");
+// if (isset($_POST[0]['submit'])) {
 
-if(isset($_POST['submit'])){
-    $id = $_POST['id'];
+//   $id = $_POST['id'];
 
-    $result = mysqli_query($con, "DELETE FROM pessoas WHERE id = '$id'");
-  }
+//   $result = mysqli_query($con, "DELETE FROM pessoas WHERE id = '$id' ");
 
+// }
+
+header("Location: ../table"); //redirecionar para table
 ?>

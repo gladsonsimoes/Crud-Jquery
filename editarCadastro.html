@@ -5,10 +5,14 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Editar Dados</title>
 
+  <!-- BootStrap CSS -->
   <link href="bootstrap/css/bootstrap.rtl.min.css" rel="stylesheet">
 
+  <!-- JQuery -->
+  <script type="text/javascript" src="js/jquery_3.6.1.js"></script>
+
+  <title>Editar Dados</title>
 </head>
 
 
@@ -38,19 +42,18 @@
   <div class="container">
     <br>
     <H1 align="center">Editar dados</H1>
-    <form method="post" id="form" action="php/postForm"> <!-- Inicio do formulario -->
+    <form method="post" id="form" action="php/updateForm"> <!-- Inicio do formulario -->
 
       <!-- Nome -->
       <div class="mb-3">
         <label class="form-label">Nome </label>
-        <input type="text" name="nome_usuario" class="form-control" name="nome" id="nome" minlength="2" required>
+        <input type="text" class="form-control" name="nome" id="nome" minlength="2" required>
       </div>
 
       <!-- Sobrenome -->
       <div class="mb-3">
         <label class="form-label">Sobrenome </label>
-        <input type="text" name="nome_usuario" class="form-control" name="sobrenome" id="sobrenome" minlength="2"
-          required>
+        <input type="text" class="form-control" name="sobrenome" id="sobrenome" minlength="2" required>
       </div>
 
       <!-- CPF -->
@@ -80,6 +83,7 @@
         <input type="text" class="form-control" name="endereco" id="endereco" placeholder="Rua e o bairro" minlegth="10"
           required>
       </div>
+
       <br>
       <div align="center">
         <button type="submit" class="btn btn-primary"> Alterar Dados</button>
@@ -91,23 +95,21 @@
 
   <script type="text/javascript" src="js/cadastro.js"></script>
 
-  <!-- <script>
-    function obterInformacao() {
-      var html = "";
+  <script>
+    var html = "";
 
-      $.getJSON("php/connection.php", function (data) {
-        for (posicao in data) {
-          html = data[posicao]["nome"];
-          html = data[posicao]["sobrenome"];
-          html = data[posicao]["cpf"];
-          html = data[posicao]["rg"];
-          html = data[posicao]["cep"];
-          html = data[posicao]["endereco"];
-        }
-        document.getElementById("pessoas").innerHTML = html;
-      });
-    }
-  </script> -->
+    $.getJSON("php/getArray.php", function (data , id) {
+        document.getElementById("nome").innerHTML =  data["nome"]
+        // html += '<td>' + data[posicao]["sobrenome"] + '</td>';
+        // html += '<td>' + data[posicao]["cpf"] + '</td>';
+        // html += '<td>' + data[posicao]["rg"] + '</td>';
+        // html += '<td>' + data[posicao]["cep"] + '</td>';
+        // html += '<td>' + data[posicao]["endereco"] + '</td>';
+
+        // document.getElementById("pessoas").innerHTML += HTML;
+      }
+    );
+  </script>
 </body>
 
 </html>

@@ -14,8 +14,5 @@ if(isset($_POST['submit'])){
 
 }
 
-header("Location: .$URL.");
-
-    
- 
+header("Location: ../table"); //redirecionar para table
 ?>
