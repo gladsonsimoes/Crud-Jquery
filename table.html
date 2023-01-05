@@ -92,12 +92,14 @@
            html += '<td>' + data[posicao]["endereco"] + '</td>';
            //botoes 
            html += '<td><form action="editarCadastro" methot="post"> <button type="submit" class="btn btn-warning"> Editar </button></form></td>';  //Botão Editar
-           html += '<td><form action="php/deletePeople" method="post"> <button type="submit" class="btn btn-danger"> Excluir </button></form></td>'; //Botão Excluir data-bs-toggle="modal" data-bs-target="#modalexcluir" 
+           html += '<td><form action="php/deletePeople" method="post"> <button type="submit" data-bs-toggle="modal" data-bs-target="#modalexcluir" class="btn btn-danger"> Excluir </button></form></td>'; //Botão Excluir  
            html += "</tr>";
        }
        document.getElementById("pessoas").innerHTML += html;
    });
 </script>
+   <!-- BootStrap JS-->
+ <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
