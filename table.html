@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+
+  <!-- JQuery -->
+  <script type="text/javascript" src="JQuery/jquery_3.6.1.min.js"></script>
+
+  <title>Lista de Pessoas</title>
+</head>
+
+<body>
+
+  <header>
+    <!-- NavBar Responsive-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand">Cadastro de Pessoa</a>
+        <button class="navbar-toggler" type="submit" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <form class="d-flex">
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item"><a class="nav-link" aria-current="page" href="cadastro">Cadastrar Pessoa</a></li>
+              <li class="nav-item"><a class="nav-link active" href="">Tabela</a></li>
+            </ul>
+          </div>
+        </form>
+      </div>
+    </nav>
+
+    <!-- Modal Para excluir -->
+    <div class="modal" id="modalexcluir" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Deseja realmente excluir o usuário</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p>Essa ação não pode ser desfeita.</p>
+          </div>
+          <form>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Não</button>
+              <button type="submit" class="btn btn-danger"> Sim </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Tabela de Lista de Pessoas -->
+  <div class="container">
+    <br>
+    <h1 align="center">Listas de Pessoas</h1><br><br>
+    <table class="table table-bordered" id="pessoas">
+      <tr>
+        <th> # </th>
+        <th>Nome</th>
+        <th>Sobrenome</th>
+        <th>CPF</th>
+        <th>RG</th>
+        <th>CEP</th>
+        <th>Endereço</th>
+        <th>Editar</th>
+        <th>Excluir</th>
+      </tr>
+    </table>
+  </div>
+  <script type="text/javascript" src="js/listarUsuarios.js">
+  </script>
+
+  <!-- BootStrap JS (Usado para modal!!)-->
+  <script type="text/javascript" src="bootstrap/js/bootstrap.bundle.min.js">
+    
+  </script>
+</body>
+
+</html>

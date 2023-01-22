@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link href="bootstrap/css/bootstrap.rtl.min.css" rel="stylesheet">
+
+  <!-- JQuery -->
+  <script type="text/javascript" src="JQuery/jquery_3.6.1.min.js"></script>
+
+  <title>Tela Cadastro</title>
+</head>
+
+<body>
+
+  <!-- NavBar Responsive-->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand"> Cadastro de Pessoa </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <form class="d-flex">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link active" aria-current="page" href="">Cadastrar Pessoa</a>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="table">Tabela</a></li>
+          </ul>
+        </div>
+      </form>
+    </div>
+  </nav>
+
+  <!-- Página -->
+  <div class="container" id="PessoaCadastro">
+    <br>
+    <h1 align="center">Cadastrar Pessoa</h1><br>
+
+    <form method="post" id="form" action="php/postForm.php">
+
+      <!-- ID -->
+      <div class="mb-3">
+        <label class="form-label">ID</label>
+        <input type="text" name="id" class="form-control" readonly disabled>
+      </div>
+
+      <!-- Nome -->
+      <div class="mb-3">
+        <label class="form-label">Nome </label>
+        <input type="text" name="nome" id="nome" class="form-control" placeholder="Digite seu nome" minlength="2"
+          maxlength="14" required autocomplete="">
+      </div>
+
+      <!-- Sobrenome -->
+      <div class="mb-3">
+        <label class="form-label">Sobrenome </label>
+        <input type="text" class="form-control" name="sobrenome" id="sobrenome" placeholder="Digite seu sobrenome"
+          minlength="2" maxlength="40" required>
+      </div>
+
+      <!-- CPF -->
+      <div class="mb-3">
+        <label class="form-label">CPF</label>
+        <input type="text" class="form-control" name="cpf" id="cpf" placeholder="000.000.000-00" maxlength="11"
+          onkeyup="validar()" required>
+      </div>
+
+      <!-- RG -->
+      <div class="mb-3">
+        <label class="form-label">RG</label>
+        <input type="text" class="form-control" name="rg" id="rg" placeholder="0000-000" maxlength="7" required
+          onkeyup="validar()">
+      </div>
+
+      <!-- CEP -->
+      <div class="mb-3">
+        <label class="form-label">CEP</label>
+        <input type="text" class="form-control" name="cep" id="cep" placeholder="00000-000" maxlength="8"
+          onkeyup="validar()" required>
+      </div>
+
+      <!-- Endereço -->
+      <div class="mb-3">
+        <label class="form-label">Endereço</label>
+        <input type="text" class="form-control" name="endereco" id="endereco" placeholder="Rua e o bairro" minlength="4"
+          maxlength="100" required>
+      </div>
+
+      <!-- Botão de enviar o Cadastro -->
+      <button type="submit" class="btn btn-secondary" name="submit" id="submit">
+        Realizar Cadastro </button>
+    </form>
+  </div>
+
+  <!-- Salvar com JQuery -->
+  <script type="text/javascript" src="js/salvar.js"></script>
+
+  <script type="text/javascript" src="js/cadastro.js"></script>
+
+  <!-- BootStrap JS-->
+  <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
