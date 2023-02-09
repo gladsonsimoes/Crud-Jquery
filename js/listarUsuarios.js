@@ -10,8 +10,9 @@ $.get("php/getArray.php", function (data) {
       + "<td>" + usuarios[i].rg + "</td>"
       + "<td>" + usuarios[i].cep + "</td>"
       + "<td>" + usuarios[i].endereco + "</td>"
-      +
- "<td><button type='submit' class='btn btn-warning' onclick=\"editar(" + usuarios[i].id + " , " + usuarios[i].nome + " , " + usuarios[i].sobrenome + "," + usuarios[i].cpf + "," + usuarios[i].rg + "," + usuarios[i].cep + "," + usuarios[i].endereco + ");\" > Editar </button></td>"
+      + 
+      
+      "<td><button type='submit' class='btn btn-warning' onclick=\"editar(" + usuarios[i].id  + ");\" > Editar </button></td>"
 
       + "<td><button type='button' class='btn btn-danger' onclick=\"excluir(" + usuarios[i].id + ");\"  >Excluir</button></td>"
       + "</tr>"
@@ -35,6 +36,28 @@ function excluir(id) {
   }
 }
 
+// "<td><button type='submit' class='btn btn-warning' onclick=\"editar(" + usuarios[i].id  + ");\" > Editar </button></td>"
+
+function editar(id) {
+  var editar = confirm("editar o usuário ID " + id + "?");
+  if (editar) {
+    $.get("php/editarUsuario.php?id=" + id , function (data) {
+      alert(data);
+    })
+    .fail(function () {
+      alert("Erro");
+    })
+    .done(function () {
+      $("input[name='id']").val(id);
+        })
+  }
+}
+
+  // $.getJSON("php/editarUsuario.php", function (data) {
+        //     $("input[name='nome']").val(data.nome);
+        //   })
+
+        
 // "<td><button type='submit' class='btn btn-warning' onclick=\"editar(" + usuarios[i].id + " , " + usuarios[i].nome + " , " + usuarios[i].sobrenome + "," + usuarios[i].cpf + "," + usuarios[i].rg + "," + usuarios[i].cep + "," + usuarios[i].endereco + ");\" > Editar </button></td>"
 
 // function editar(id, nome, sobrenome, cpf, rg, cep, endereco) {
@@ -46,27 +69,3 @@ function excluir(id) {
 //   $("input[name='cep']").val(cep);
 //   $("input[name='endereco']").val(endereco);
 // }
-
-
-// "<td><button type='submit' class='btn btn-warning' onclick=\"editar(" + usuarios[i].id  + ");\" > Editar </button></td>"
-
-
-function editar(id) {
-  var editar = confirm("editar o usuário ID " + id + "?");
-  if (editar) {
-    $.get("php/editarUsuario.php?id=" + id , function (data) {
-      alert(data);
-    })
-      .fail(function () {
-        alert("Erro");
-      })
-      .done(function () {
-        $("input[name='id']").val(id);
-
-        // $.getJSON("php/editarUsuario.php", function (data) {
-        //     $("input[name='nome']").val(data.nome);
-        //   })
-         
-        })
-  }
-}
