@@ -1,4 +1,5 @@
 <?php
+include_once('connection.php');
 
 $id = filter_input(INPUT_POST, 'id');
 $nome = filter_input(INPUT_POST, 'nome');
@@ -7,8 +8,6 @@ $cpf = filter_input(INPUT_POST, 'cpf');
 $rg = filter_input(INPUT_POST, 'rg');
 $cep = filter_input(INPUT_POST, 'cep');
 $endereco = filter_input(INPUT_POST, 'endereco');
-
-include_once('connection.php');
 
 $selectTable = mysqli_query($con, "SELECT * FROM usuarios");
 

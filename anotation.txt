@@ -1,0 +1,47 @@
+php 
+//condição para se caso a tabela exista
+// if ($selectTable-> num_rows > 0) {
+//     while ($field = mysqli_fetch_assoc($selectTable)) {
+//         $usuario[] = $field;
+//     }
+// } else {
+//     header("location: table.html");
+// }
+
+
+// $("input[name='id']").val(id);
+//   $("input[name='nome']").val(nome);
+//   $("input[name='sobrenome']").val(sobrenome);
+//   $("input[name='cpf']").val(cpf);
+//   $("input[name='rg']").val(rg);
+//   $("input[name='cep']").val(cep);
+//   $("input[name='endereco']").val(endereco);
+
+// function editar(id,nome,sobrenome, cpf, rg, cep, endereco){
+//   $(this).append(
+//     $('<input>', { type: 'text', val: $('#id').val(id) } ) ,
+//     $('<input>', { type: 'text', val: $('#nome').val(nome) } ) ,
+//     $('<input>', { type: 'text', val: $('#sobrenome').val(sobrenome) } ) ,
+//     $('<input>', { type: 'text', val: $('#cpf').val(cpf) } ) ,
+//     $('<input>', { type: 'text', val: $('#rg').val(rg) } ) ,
+//     $('<input>', { type: 'text', val: $('#cep').val(cep) } ) ,
+//     $('<input>', { type: 'text', val: $('#endereco').val(endereco) } )
+//   );
+// }
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type=text required name='txtstart' style='width:150px' value=''>
+</body>
+<script>
+    document.querySelector("[name='txtstart']").value = "Message";
+</script>
+</html>

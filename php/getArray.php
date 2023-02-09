@@ -1,5 +1,4 @@
 <?php
-
 include_once('connection.php');
 
 //Selecionar tabela

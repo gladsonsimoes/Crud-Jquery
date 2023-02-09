@@ -36,6 +36,8 @@
 </nav>
 <br>
 
+
+
 <body>
   <div class="container">
     <br>
@@ -43,48 +45,37 @@
 
     <form method="post" id="form" action="php/postForm.php">
 
-      <!-- ID -->
-      <div class="mb-3">
-        <label class="form-label">ID</label>
-        <input type="text" name="id" class="form-control" value="" readonly disabled>
-      </div>
 
-      <!-- Nome -->
       <div class="mb-3">
         <label class="form-label">Nome </label>
-        <input type="text" class="form-control" name="nome" id="nome" value=""  autocomplete="on" placeholder="Digite seu nome"
+        <input type="text" class="form-control" name="nome" id="nome" value="" placeholder="Digite seu nome"
           minlength="2" required>
       </div>
 
-      <!-- Sobrenome -->
       <div class="mb-3">
         <label class="form-label">Sobrenome </label>
         <input type="text" class="form-control" name="sobrenome" id="sobrenome" value="" placeholder="sobrenome"
           minlength="2" required>
       </div>
 
-      <!-- CPF -->
       <div class="mb-3">
         <label class="form-label">CPF</label>
         <input type="text" class="form-control" name="cpf" id="cpf" value="" placeholder="000.000.000-00" minlength="12"
           maxlength="12" onkeyup="validar()" required>
       </div>
 
-      <!-- RG -->
       <div class="mb-3">
         <label class="form-label">RG</label>
         <input type="text" class="form-control" name="rg" id="rg" value="" placeholder="0000-000" minlength="7"
           maxlength="7" onkeyup="validar()" required>
       </div>
 
-      <!-- CEP -->
       <div class="mb-3">
         <label class="form-label">CEP</label>
         <input type="text" class="form-control" name="cep" id="cep" value="" placeholder="00000-000" minlength="8"
           maxlength="8" onkeyup="validar()" required>
       </div>
 
-      <!-- Endereco -->
       <div class="mb-3">
         <label class="form-label">Endereço</label>
         <input type="text" class="form-control" name="endereco" value="" id="endereco" placeholder="Rua e o bairro"
@@ -100,7 +91,7 @@
     <div align="center"><br><a href="table">Voltar para a tabela </a></div>
   </div>
 
-  <script type="text/javascript" src="js/editarUsuario.js"></script>
+  <script type="text/javascript" src="js/listarUsuarios.js"></script>
 
   <script type="text/javascript" src="js/validarCadastro.js"></script>
 
