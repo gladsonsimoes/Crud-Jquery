@@ -20,6 +20,7 @@ $('#form').submit(function (event) {
     });
 });
 
+//função pra limpar o formulario depois que for enviado
 function limparForm() {
   $("input[name='id']").val('');
   $("input[name='nome']").val('');
