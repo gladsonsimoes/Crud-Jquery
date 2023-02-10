@@ -27,10 +27,10 @@ Passo 2 - vai no arquivo php/connection.php e altere as configurações necessá
 <?php 
 //Configurar PHP com o banco de dados
 
-$host = 'localhost:3312'; <- Altere a porta 3312 de acordo com a porta do seu banco de dados
-$db = 'dbForm'; <- sua database criada ( esta database esta de acordo com o codigo do passo 1)
-$user = 'root' ; <- Altere o usuario se for diferente
-$pass = '' ; <- Coloque sua senha se caso tiver!
+$host = 'localhost:3312'; //<- Altere a porta 3312 de acordo com a porta do seu banco de dados
+$db = 'dbForm'; // sua database criada ( esta database esta de acordo com o codigo do passo 1)
+$user = 'root' ; // Altere o usuario se for diferente
+$pass = '' ; // Coloque sua senha se caso tiver!
 
 $con = mysqli_connect($host, $user, $pass);
 
