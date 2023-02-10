@@ -2,7 +2,7 @@
 
 #### Este é um crud simples feito com php , javascript e sua biblioteca Jquery
 
-## Passo a passo de como executar:
+## Passo a passo de como executar (Localhost):
 
 <b>Passo 1</b> - Crie uma database no mysql com a seguinte tabela:
 
