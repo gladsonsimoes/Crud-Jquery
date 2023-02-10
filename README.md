@@ -1,10 +1,10 @@
 # CRUD JQUERY
 
-Este é um crud simples feito com php , javascript e sua biblioteca Jquery
+#### Este é um crud simples feito com php , javascript e sua biblioteca Jquery
 
-Passo a passo de como executar!
+## Passo a passo de como executar:
 
-Passo 1 - Crie uma database no mysql com a seguinte tabela:
+<b>Passo 5</b> - Crie uma database no mysql com a seguinte tabela:
 
 ~~~mysql
 create database dbForm;
@@ -21,7 +21,7 @@ create table usuarios (
 );
 ~~~
 
-Passo 2 - vai no arquivo php/connection.php e altere as configurações necessárias
+<b>Passo 3</b> - vai no arquivo php/connection.php e altere as configurações necessárias
 
 ~~~php
 <?php 
@@ -39,6 +39,6 @@ $database = mysqli_select_db($con, $db);
 ?>
 ~~~
 
-Passo 3 - Coloque todos os arquivos na pasta htdocs do xampp , ou ser for diferente do xampp é só colocar na pasta que irá mostrar no localhost
+<b>Passo 3</b> - Coloque todos os arquivos na pasta htdocs do xampp , ou ser for diferente do xampp é só colocar na pasta que irá mostrar no localhost
 
-Passo 4 - Depois de ter colocado os arquivos ative o <b> Apache </b> e o <b> Mysql </b> , e digite localhost em qualquer navegador e pronto!
+<b>Passo 4</b> - Depois de ter colocado os arquivos ative o <b> Apache </b> e o <b> Mysql </b> , e digite localhost em qualquer navegador e pronto!
