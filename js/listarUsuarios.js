@@ -17,6 +17,7 @@ $.get("php/getArray.php", function (data) {
   }
 });
 
+
 function excluir(id) {
   var excluir = confirm("Tem certeza que deseja excluir o usuário ID " + id + "?");
   if (excluir) {
@@ -40,7 +41,34 @@ function editar(id , nome, sobrenome, cpf, rg , cep , endereco) {
   $("input[name=rg]").val(rg);
   $("input[name=cep]").val(cep);
   $("input[name=endereco]").val(endereco);
+
+  $("input[name=nome]").focus();
 }
+
+//formulario especifico para edição
+$('#form').submit(function (event) {
+  //evitar a submissão do formulário de cadastro
+  event.preventDefault();
+  var id = $("input[name='id']").val();
+  var nome = $("input[name='nome']").val();
+  var sobrenome = $("input[name='sobrenome']").val();
+  var cpf = $("input[name='cpf']").val();
+  var rg = $("input[name='rg']").val();
+  var cep = $("input[name='cep']").val();
+  var endereco = $("input[name='endereco']").val();
+
+  $.post("php/edit.php",
+    { id: id, nome: nome, sobrenome: sobrenome, cpf: cpf, rg: rg, cep: cep, endereco: endereco },
+    function (data) {
+      alert(data);
+    }).fail(function () {
+      alert("Falha ao tentar executar o comando!");
+    }).done(function () {
+      window.location.href = "table"
+    });
+});
+
+
 
 
 
