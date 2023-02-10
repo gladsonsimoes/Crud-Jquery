@@ -41,4 +41,4 @@ $database = mysqli_select_db($con, $db);
 
 Passo 3 - Coloque todos os arquivos na pasta htdocs do xampp , ou ser for diferente do xampp é só colocar na pasta que irá mostrar no localhost
 
-Passo 4 - Depois de ter colocado, e ative o <b> apache </b> e o <b> mysql </b> do xampp e depois digite localhost em qualquer navegador!
+Passo 4 - Depois de ter colocado os arquivos ative o <b> Apache </b> e o <b> Mysql </b> , e digite localhost em qualquer navegador e pronto!
