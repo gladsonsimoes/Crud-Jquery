@@ -4,7 +4,7 @@
 
 ## Passo a passo de como executar:
 
-<b>Passo 5</b> - Crie uma database no mysql com a seguinte tabela:
+<b>Passo 1</b> - Crie uma database no mysql com a seguinte tabela:
 
 ~~~mysql
 create database dbForm;
@@ -21,7 +21,7 @@ create table usuarios (
 );
 ~~~
 
-<b>Passo 3</b> - vai no arquivo php/connection.php e altere as configurações necessárias
+<b>Passo 2</b> - vai no arquivo php/connection.php e altere as configurações necessárias
 
 ~~~php
 <?php 
