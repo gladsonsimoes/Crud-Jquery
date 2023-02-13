@@ -12,10 +12,3 @@ function validar() {
   document.getElementById("cep").value = cep.replace(/[^0-9]/g, '');
 
 }
-
-
-
-
-
-
-

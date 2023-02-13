@@ -30,5 +30,3 @@ function limparForm() {
   $("input[name='cep']").val('');
   $("input[name='endereco']").val('');
 }
-
-

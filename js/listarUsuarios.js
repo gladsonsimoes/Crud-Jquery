@@ -17,7 +17,6 @@ $.get("php/getUser.php", function (data) {
   }
 });
 
-
 function excluir(id) {
   var excluir = confirm("Tem certeza que deseja excluir o usuário ID " + id + "?");
   if (excluir) {
@@ -67,14 +66,3 @@ $('#form').submit(function (event) {
       window.location.href = "table"
     });
 });
-
-
-
-
-
-
-
-
-
-
-
