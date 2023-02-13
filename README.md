@@ -41,4 +41,4 @@ $database = mysqli_select_db($con, $db);
 
 <b>Passo 3</b> - Coloque todos os arquivos na pasta htdocs do xampp , ou ser for diferente do xampp é só colocar na pasta que irá mostrar no localhost
 
-<b>Passo 4</b> - Depois de ter colocado os arquivos ative o <b> Apache </b> e o <b> Mysql </b> , e digite <b> <a href="https://localhost/crud-jquery"> localhost/crud-jquery </a></b> em qualquer navegador e pronto!
+<b>Passo 4</b> - Depois de ter colocado os arquivos ative o <b> Apache </b> e o <b> Mysql </b> , e digite <b> localhost/crud-jquery</b> em qualquer navegador e pronto!
