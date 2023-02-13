@@ -37,28 +37,6 @@
       </div>
     </nav>
 
-    <!-- Modal Para excluir -->
-    <!-- <div class="modal" id="modalexcluir" tabindex="-1">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title">Deseja realmente excluir o usuário</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            <p>Essa ação não pode ser desfeita.</p>
-          </div>
-          <form>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Não</button>
-              <button type="button" class="btn btn-danger"> Sim </button>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
-  </header> -->
-
     <!-- Tabela de Lista de Pessoas -->
     <div class="container">
       <br>
@@ -77,7 +55,7 @@
           <th>Excluir</th>
         </tr>
       </table>
-      </div>
+    </div>
     </div>
 
 
@@ -89,8 +67,7 @@
       <form method="post" id="form" action=".">
 
         <div class="mb-3">
-          <input type="text" class="form-control" name="id"   placeholder="Nome" minlength="2" readonly disabled
-            required>
+          <input type="text" class="form-control" name="id" placeholder="Nome" minlength="2" readonly disabled required>
         </div>
 
         <div class="mb-3">
@@ -125,19 +102,14 @@
 
         <br>
         <div align="center">
-          <button type="submit" class="btn btn-primary" > Alterar Dados</button>
+          <button type="submit" class="btn btn-primary"> Alterar Dados</button>
         </div>
         <br>
 
       </form>
 
-
-    <script type="text/javascript" src="js/listarUsuarios.js"></script>
-
-    <!-- BootStrap JS (Usado para modal!!)-->
-    <!-- <script type="text/javascript" src="bootstrap/js/bootstrap.bundle.min.js"> -->
-
-    </script>
+      <script type="text/javascript" src="js/listarUsuarios.js"></script>
+      <script type="text/javascript" src="js/validarCadastro.js"></script>
 </body>
 
 </html>
