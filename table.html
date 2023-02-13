@@ -58,7 +58,6 @@
     </div>
     </div>
 
-
     <br>
     <h1 align="center">Editar Usuário</h1><br><br>
 
@@ -67,36 +66,35 @@
       <form method="post" id="form" action=".">
 
         <div class="mb-3">
-          <input type="text" class="form-control" name="id" placeholder="Nome" minlength="2" readonly disabled required>
+          <input type="text" class="form-control" name="id" placeholder="ID" minlength="2" readonly disabled required>
         </div>
 
         <div class="mb-3">
-          <input type="text" class="form-control" name="nome" id="nome" value="" placeholder="Nome" minlength="2"
+          <input type="text" class="form-control" name="nome" id="nome" placeholder="Nome" minlength="2" required>
+        </div>
+
+        <div class="mb-3">
+          <input type="text" class="form-control" name="sobrenome" id="sobrenome" placeholder="sobrenome" minlength="2"
             required>
         </div>
 
         <div class="mb-3">
-          <input type="text" class="form-control" name="sobrenome" id="sobrenome" value="" placeholder="sobrenome"
-            minlength="2" required>
+          <input type="text" class="form-control" name="cpf" id="cpf" placeholder="000.000.000-00" minlength="11"
+            maxlength="11" onkeyup="validar()" required>
         </div>
 
         <div class="mb-3">
-          <input type="text" class="form-control" name="cpf" id="cpf" value="" placeholder="000.000.000-00"
-            minlength="12" maxlength="12" onkeyup="validar()" required>
+          <input type="text" class="form-control" name="rg" id="rg" placeholder="0000-000" minlength="7" maxlength="7"
+            onkeyup="validar()" required>
         </div>
 
         <div class="mb-3">
-          <input type="text" class="form-control" name="rg" id="rg" value="" placeholder="0000-000" minlength="7"
-            maxlength="7" onkeyup="validar()" required>
-        </div>
-
-        <div class="mb-3">
-          <input type="text" class="form-control" name="cep" id="cep" value="" placeholder="00000-000" minlength="8"
+          <input type="text" class="form-control" name="cep" id="cep" placeholder="00000-000" minlength="8"
             maxlength="8" onkeyup="validar()" required>
         </div>
 
         <div class="mb-3">
-          <input type="text" class="form-control" name="endereco" value="" id="endereco" placeholder="Rua e o bairro"
+          <input type="text" class="form-control" name="endereco" id="endereco" placeholder="Rua e o bairro"
             minlegth="10" required>
         </div>
 
@@ -105,7 +103,6 @@
           <button type="submit" class="btn btn-primary"> Alterar Dados</button>
         </div>
         <br>
-
       </form>
 
       <script type="text/javascript" src="js/listarUsuarios.js"></script>
