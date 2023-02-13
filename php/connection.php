@@ -1,6 +1,6 @@
 <?php 
 //Configurar PHP com o banco de dados
-$host = 'localhost:3312'; //3312 é a porta do meu banco de dados
+$host = 'localhost:3312';
 $db = 'dbForm'; 
 $user = 'root' ; 
 $pass = '' ; 

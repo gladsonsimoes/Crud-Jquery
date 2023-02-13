@@ -1,10 +1,10 @@
-$.get("php/getArray.php", function (data) {
+$.get("php/getUser.php", function (data) {
   var usuarios = JSON.parse(data);
   for (var i in usuarios) {
     $("tbody").append(
       "<tr>"
-      + "<td>" + usuarios[i].id.toString() + "</td>"
-      + "<td>" + usuarios[i].nome.toString() + "</td>"
+      + "<td>" + usuarios[i].id + "</td>"
+      + "<td>" + usuarios[i].nome + "</td>"
       + "<td>" + usuarios[i].sobrenome + "</td>"
       + "<td>" + usuarios[i].cpf + "</td>"
       + "<td>" + usuarios[i].rg + "</td>"
@@ -21,7 +21,7 @@ $.get("php/getArray.php", function (data) {
 function excluir(id) {
   var excluir = confirm("Tem certeza que deseja excluir o usuário ID " + id + "?");
   if (excluir) {
-    $.get("php/excluirusuario.php?id=" + id, function (data) {
+    $.get("php/deleteUser.php?id=" + id, function (data) {
       alert(data);
     })
       .fail(function () {
@@ -57,7 +57,7 @@ $('#form').submit(function (event) {
   var cep = $("input[name='cep']").val();
   var endereco = $("input[name='endereco']").val();
 
-  $.post("php/edit.php",
+  $.post("php/editUser.php",
     { id: id, nome: nome, sobrenome: sobrenome, cpf: cpf, rg: rg, cep: cep, endereco: endereco },
     function (data) {
       alert(data);

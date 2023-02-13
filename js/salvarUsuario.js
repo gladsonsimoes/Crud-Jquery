@@ -9,7 +9,7 @@ $('#form').submit(function (event) {
   var cep = $("input[name='cep']").val();
   var endereco = $("input[name='endereco']").val();
 
-  $.post("php/postForm",
+  $.post('php/postUser.php',
     { id: id, nome: nome, sobrenome: sobrenome, cpf: cpf, rg: rg, cep: cep, endereco: endereco },
     function (data) {
       alert(data);

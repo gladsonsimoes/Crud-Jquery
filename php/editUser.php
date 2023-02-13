@@ -21,7 +21,7 @@ if($id == ''){
 $result = mysqli_query($con, $selectTable);
 
 if($result === true){
-    echo " ".$id." ".$nome." ".$sobrenome." editado e salvo com sucesso!" ;
+    echo " Usuário ".$nome." ".$sobrenome." editado com sucesso!" ;
 } else {
     echo "Problemas ao salvar o usuário!";
 }

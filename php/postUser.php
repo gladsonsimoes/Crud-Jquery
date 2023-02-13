@@ -21,7 +21,7 @@ if($id == ''){
 $result = mysqli_query($con, $selectTable);
 
 if($result === true){
-    echo "".$nome." ".$sobrenome." cadastrado com sucesso!" ;
+    echo "Usuário ".$nome." ".$sobrenome." cadastrado com sucesso!" ;
 } else {
     echo "Problemas ao salvar o usuário!";
 }
