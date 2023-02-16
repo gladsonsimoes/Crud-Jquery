@@ -10,7 +10,7 @@ $.get("php/getUser.php", function (data) {
       + "<td>" + usuarios[i].rg + "</td>"
       + "<td>" + usuarios[i].cep + "</td>"
       + "<td>" + usuarios[i].endereco + "</td>"
-      + "<td><button type='submit' class='btn btn-warning' onclick=\"editar('" + usuarios[i].id + "' , '" + usuarios[i].nome + "' , '" + usuarios[i].sobrenome + "' , '" + usuarios[i].cpf + "' , '" + usuarios[i].rg + "' , '" + usuarios[i].cep + "' , '" + usuarios[i].endereco + "');\" > Editar </button></td>"
+      + "<td><button type='button' class='btn btn-warning' onclick=\"editar('" + usuarios[i].id + "' , '" + usuarios[i].nome + "' , '" + usuarios[i].sobrenome + "' , '" + usuarios[i].cpf + "' , '" + usuarios[i].rg + "' , '" + usuarios[i].cep + "' , '" + usuarios[i].endereco + "');\" > Editar </button></td>"
       + "<td><button type='button' class='btn btn-danger' onclick=\"excluir(" + usuarios[i].id + ");\"  >Excluir</button></td>"
       + "</tr>"
     );
