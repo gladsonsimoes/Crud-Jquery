@@ -1,6 +1,6 @@
 # CRUD SIMPLES
 
-<h4> Este é um crud simples feito com php , javascript e sua biblioteca Jquery <a href="https://youtu.be/nKoe722XS74">veja o video do projeto</a> </h4>
+<h4> Este é um crud simples feito com php , javascript e sua biblioteca Jquery <a href="https://youtu.be/nKoe722XS74">veja o video do projeto </a> ou <a href="https://gladsonsimoes.github.io/Crud-Simples/"> pré visualizar </a> </h4>
 
 ## Passo a passo de como executar (Localhost):
 
