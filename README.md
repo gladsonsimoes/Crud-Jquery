@@ -1,4 +1,4 @@
-# CRUD JQUERY
+# CRUD SIMPLES
 
 <h4> Este é um crud simples feito com php , javascript e sua biblioteca Jquery <a href="https://youtu.be/nKoe722XS74">veja o video do projeto</a> </h4>
 
